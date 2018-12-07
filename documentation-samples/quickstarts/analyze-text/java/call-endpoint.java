@@ -35,10 +35,10 @@ public class LuisGetRequest {
             URIBuilder endpointURLbuilder = new URIBuilder("https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/" + AppId + "?");
 
             // query text
-            endpointURL.setParameter("q", "turn on the left light");
+            endpointURLbuilder.setParameter("q", "turn on the left light");
 
             // create URL from string
-            URI endpointURL = endpointURL.build();
+            URI endpointURL = endpointURLbuilder.build();
 
             // create HTTP object from URL
             HttpGet request = new HttpGet(endpointURL);
